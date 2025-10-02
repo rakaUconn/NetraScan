@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>12.0</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <Platforms>AnyCPU;x64</Platforms>
+    <AssemblyName>NetraScan.Processing</AssemblyName>
+    <RootNamespace>NetraScan.Processing</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Cuda\" />
+    <Folder Include="FFT\" />
+    <Folder Include="Pipeline\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ManagedCuda-12" Version="12.8.60" />
+    <PackageReference Include="ManagedCuda-CUBLAS" Version="12.8.60" />
+    <PackageReference Include="ManagedCuda-CUFFT" Version="12.8.60" />
+    <PackageReference Include="ManagedCuda-CURAND" Version="12.8.60" />
+    <PackageReference Include="ManagedCuda-CUSPARSE" Version="12.8.60" />
+    <PackageReference Include="ManagedCuda-NPP" Version="12.8.60" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetraScan.Common\NetraScan.Common.csproj" />
+  </ItemGroup>
+
+</Project>

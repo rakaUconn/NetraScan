@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>AnyCPU;x64</Platforms>
+    <AssemblyName>NetraScan</AssemblyName>
+    <RootNamespace>NetraScan.UI</RootNamespace>
+    
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    
+    <Version>1.0.0</Version>
+    <Description>NetraScan OCT Imaging System - User Interface</Description>
+    <Product>NetraScan</Product>
+    <Copyright>Copyright © 2025</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Controls\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Views\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetraScan.Common\NetraScan.Common.csproj" />
+    <ProjectReference Include="..\NetraScan.Core\NetraScan.Core.csproj" />
+    <ProjectReference Include="..\NetraScan.Hardware\NetraScan.Hardware.csproj" />
+    <ProjectReference Include="..\NetraScan.Processing\NetraScan.Processing.csproj" />
+  </ItemGroup>
+
+</Project>
