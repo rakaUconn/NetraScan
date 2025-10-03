@@ -16,10 +16,10 @@ public class CameraConfig
     public int ServerIndex { get; set; } = 0;
     public int ResourceIndex { get; set; } = 0;
     public int BufferCount { get; set; } = 8;
-    public int LineRate { get; set; } = 147000;
+    public int LineRate { get; set; } = 250000;
     public int PixelsPerLine { get; set; } = 2048;
     public int LinesPerBScan { get; set; } = 512;
-    public int BitsPerPixel { get; set; } = 12;
+    public int BitsPerPixel { get; set; } = 10;
     public bool EnableFrameLostDetection { get; set; } = true;
 
     public bool Validate(out List<string> errors)

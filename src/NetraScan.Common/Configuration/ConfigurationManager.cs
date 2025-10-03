@@ -35,7 +35,11 @@ public static class ConfigurationManager
             }
 
             var json = File.ReadAllText(ConfigPath);
-            var config = JsonSerializer.Deserialize<HardwareConfig>(json);
+            var options = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            };
+            var config = JsonSerializer.Deserialize<HardwareConfig>(json, options);
 
             if (config == null)
             {

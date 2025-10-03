@@ -19,8 +19,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Camera\" />
-    <Folder Include="Galvo\" />
     <Folder Include="Gpu\" />
   </ItemGroup>
 

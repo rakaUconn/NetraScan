@@ -9,16 +9,17 @@ global using System.Runtime.InteropServices;
 global using Microsoft.Extensions.Logging;
 
 // NetraScan Common
-// global using NetraScan.Common;
-// global using NetraScan.Common.Configuration;
+global using NetraScan.Common;
+global using NetraScan.Common.Configuration;
 // global using NetraScan.Common.Interfaces;
 
 // Hardware SDKs
+// Hardware SDKs - Use aliases to avoid conflicts
 global using DALSA.SaperaLT.SapClassBasic;
-global using NationalInstruments.DAQmx;
+global using DaqTask = NationalInstruments.DAQmx.Task;  // Alias for NI Task
 
 // Project namespaces
 //global using NetraScan.Hardware.Interfaces;
-//global using NetraScan.Hardware.Camera;
+global using NetraScan.Hardware.Camera;
 //global using NetraScan.Hardware.Galvo;
 //global using NetraScan.Hardware.Gpu;

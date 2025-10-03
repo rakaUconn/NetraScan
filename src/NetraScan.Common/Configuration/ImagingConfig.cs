@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace NetraScan.Common.Configuration;
 /// <summary>
 /// public class ImagingConfig
-
 /// </summary>
 public class ImagingConfig
 {
